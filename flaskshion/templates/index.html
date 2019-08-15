@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<hr>
+{% if current_user.is_authenticated%}
+  <div class="container">
+     <a href="/topics" class="anchor"><h3>What is on your mind?</h3></a> 
+    {% for topic in topics %}
+     <a href="/topics/comment/{{topic.id}}"><h5 style="color: brown">{{topic.author}} at {{topic.date_created}}</h5></a>
+       
+       <p> {{topic.content}}</p>
+        <hr>
+    {% endfor %}
+</div>
+{% else %}
+<div class="welcome">
+    <center><p>Start A Topic We Can Chat About</p></center>
+</div>
+
+{% endif %}
+{% endblock body %}

@@ -1,0 +1,110 @@
+body {
+  font-family: monospace;
+  background-color: ;
+}
+header {
+  font-family: monospace;
+  
+  padding: 20px;
+}
+header h1 {
+  color: white;
+}
+.logo {
+
+  background-color: brown; 
+  justify-content: space-between;
+}
+.links{
+  display: flex;
+  justify-content:space-between;
+  margin:20px;
+  padding: 20px;
+}
+.links a {
+  color: white;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: crimson;
+}
+nav a {
+  padding: 20px;
+  color: white;
+}
+
+nav a:hover {
+  color: brown;
+  background-color: white;
+
+  text-decoration: none;
+}
+footer {
+  text-align: center;
+
+  color: white;
+  background-color:crimson;
+  padding: 20px;
+  font-family: monospace;
+}
+.container {
+  background-color: white;
+}
+.welcome {
+  font-size: 50px;
+  color: brown;
+  font-family: monospace;
+  padding: 20px;
+}
+.form-group {
+  color: brown;
+}
+
+.form-control {
+  color: brown;
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: white;
+  border-bottom-color: brown;
+  
+}
+
+.form{
+  padding: 30px;
+}
+.form h3 {
+  color: brown;
+  
+}
+.Mybtn {
+  color: white;
+  background-color: brown;
+  border-radius: 10px;
+  padding: 16px;
+}
+.small {
+  color: brown;
+}
+legend{
+  color: brown;
+
+}
+legend a{
+  color:brown;
+}
+
+legend a:hover{
+  text-decoration: none;
+  color: brown;
+}
+
+.flash{
+  color: brown;
+  text-align: center;
+  font-weight: bolder;
+}
+.anchor{
+  color: brown;
+}
+

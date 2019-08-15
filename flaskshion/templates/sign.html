@@ -1,0 +1,67 @@
+{% extends 'layout.html' %} 
+{% block body %}
+<div class="container">
+  {%with messages=get_flashed_messages()%}
+  {% if messages %}
+      {% for message in messages %}
+          <div class="flash">
+            {{ message }}
+          </div>
+      {% endfor %}
+  {% endif %}
+  {%endwith%}
+  <div class="form">
+    <form action="/adduser" method="POST">
+     
+      <h3>Sign Up</h3>
+
+      <div class="form-group">
+        <label for="name">{{ form.fname.label }}</label>
+        {{form.fname(class='form-control')}}
+        <small id="helpId" class="small">Your First name</small>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Last Name</label>
+        {{form.lname(class='form-control')}}
+        <small id="helpId" class="small">Your last name</small>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Username</label>
+        {{form.username(class='form-control')}}
+        <small id="helpId" class="small">Your Username</small>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Email</label>
+        {{form.email(class='form-control')}}
+        <small id="helpId" class="small">Your Email</small>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Password</label>
+        {{form.password(class='form-control')}}
+        <small id="helpId" class="small">Your Password</small>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Confirm Password</label>
+        {{form.confirm(class='form-control')}}
+        <small id="helpId" class="small ">Confirm Your Password</small>
+      </div>
+
+      <div class="form-group">
+        {{form.submit(class='Mybtn')}}
+      </div>
+
+    
+     
+    </form>
+  </div>
+    <legend>
+     <small>Have an account, <a href="/login">Login!</a></small>
+    </legend>
+</div>
+
+{% endblock body %}

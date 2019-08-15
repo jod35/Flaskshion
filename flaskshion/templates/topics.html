@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block body %}
+{%with messages=get_flashed_messages()%}
+{% if messages %}
+{% for message in messages %}
+<div class="flash">
+    {{message}}
+</div>
+{% endfor %}
+
+{% endif %}
+{%endwith%}
+<form action="/topics" method="post">
+<div class="form">
+    <h3>Create a new topic</h3>
+     <div class="form-group">
+        <label for="name">Title</label>
+        {{form.topic(class='form-control')}}
+     </div>
+
+     <div class="form-group">
+        <label for="name">Content</label>
+        {{form.content(class='form-control')}}
+     </div>
+</div>
+{{form.submit(class='Mybtn')}}
+</form>
+<hr><hr>
+
+<h4 style="color: brown">Topics Created by You</h4>
+<div class="container topic">
+    <br><br>
+    {% for topic  in topics %}
+        <h4 style="color: brown">You at {{topic.date_created}}</h4>
+        <h6 style="color: salmon">{{topic.title}}</h6>
+         <p>{{topic.content}}</p>
+        
+        <a href="" class="anchor">Edit Topic</a>
+        <a href="" class="anchor"> Delete Topic</a>
+        <br><br>
+        <hr>
+    {% endfor %}
+</div>
+{% endblock body %}
